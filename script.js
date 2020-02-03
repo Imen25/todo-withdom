@@ -1,7 +1,7 @@
 const btnAddArray = Array.from(document.getElementsByClassName('btn-add'))
 const item = document.getElementById('add-item')
 const list = document.getElementById('list')
-let do_item_list, do_item_list1, x, btnUndoElement, btnCompleteElement
+let do_item_list, do_item_list1, x
 let index = 0
 
 btnAddArray[0].addEventListener('click', () => {
@@ -31,64 +31,26 @@ btnAddArray[0].addEventListener('click', () => {
             list.insertBefore(do_item_list1, list.querySelector('.item_list_g'))
         index++
     }
-
-    /*****do */
-    /*let btnCompleteElement = Array.from(document.getElementsByClassName('fa-circle'))
-    let btnUndoElement = Array.from(document.getElementsByClassName('fa-check-circle'))
-    for (let index in btnCompleteElement) {
-        btnCompleteElement[index].addEventListener('click', () => {
+              
                
-
-                btnCompleteElement[index].parentElement.style.color = '#84443abd '
-                btnCompleteElement[index].className = 'far fa-check-circle'
-                btnCompleteElement = Array.from(document.getElementsByClassName('fa-circle'))
-                console.log(index,btnCompleteElement[index].className,btnCompleteElement)
-                btnUndoElement = Array.from(document.getElementsByClassName('fa-check-circle'))
-                console.log(btnUndoElement)
-           
-            
-        })
-        
-        
-    }
-    btnUndoElement = Array.from(document.getElementsByClassName('fa-check-circle'))
-    for (let index in btnUndoElement) {
-        btnUndoElement[index].addEventListener('click', () => {
-               
-                btnUndoElement[index].parentElement.style.color = 'white '
-                btnUndoElement[index].className = 'far fa-circle'
-                btnCompleteElement = Array.from(document.getElementsByClassName('fa-circle'))
-               // btnUndoElement = Array.from(document.getElementsByClassName('fa-check-circle'))
-                console.log(index,btnUndoElement[index].className,btnUndoElement)
-            
-        })
-    }*/
-    //let btnUndoElement = Array.from(document.getElementsByClassName('fa-check-circle'))
-    //console.log(btnUndoElement)
-    //  btnCompleteElement = Array.from(document.getElementsByClassName('far'))
 })
 const checkClicked = (index) => {
-
     if (document.getElementById(index).className == 'far fa-circle') {
         document.getElementById(index).parentElement.style.color = '#84443abd'
         document.getElementById(index).className = 'far fa-check-circle'
-
+        console.log('true')
     }
-    if (document.getElementById(index).className == 'far fa-check-circle') {
+    else {
         document.getElementById(index).parentElement.style.color = 'white'
         document.getElementById(index).className = 'far fa-circle'
+        console.log('false')
     }
 
 
-
-
-    // })
 
 }
 
 
-// }}
-// })
 
 const removeItem = index => {
 
